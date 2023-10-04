@@ -11,7 +11,7 @@ connectDB()
 // Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended: false}));
-app.use(taskRoutes);
+app.use("/api/tasks", taskRoutes);
 
 app.get("/", (req, res) => {
   res.send("Home page")
